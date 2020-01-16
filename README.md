@@ -1,1 +1,1 @@
-# Supporting-Dataset-Ammonia-Oxidation-Pt-Pd-Rh
+Supporting Dataset of "DFT and Microkinetic Comparison of Pt, Pd and Rh-Catalyzed Ammonia Oxidation"
