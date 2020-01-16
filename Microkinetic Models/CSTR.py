@@ -152,7 +152,7 @@ def get_rate_constants(T):
                   A_H2O_f, 
                   A_H2O_f/K_H2O*np.exp(Ea_eV[19]/kb/T)*P0,
                   kb*T/h, 
-                  kb*T/h/K_NN*np.exp((Ea_eV[21]-Ea_eV[20])/kb/T)/P0,                                                 
+                  kb*T/h/K_NN*np.exp((Ea_eV[21]-Ea_eV[20])/kb/T)/P0,
                   kb*T/h, 
                   kb*T/h, 
                   K_NO*A_NO_b*np.exp((Ea_eV[24]-Ea_eV[25])/kb/T)*P0, 
