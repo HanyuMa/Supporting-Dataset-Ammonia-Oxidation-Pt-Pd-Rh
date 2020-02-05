@@ -34,7 +34,7 @@ evtoj= 96.485 * 1000       # J/eV
 
 # Entropy of gases are from NIST-JANAF. Adsorbate entropies are estimated with harmonic oscillator approximation. 
 gas_entropy = pd.read_csv("gas_entropy.csv")
-adsorbate_entropy = pd.read_csv("adsorbate_entropy_Pt.csv")
+adsorbate_entropy = pd.read_csv("adsorbate_entropy_Pt211.csv")
 
 
 # In[ ]:
@@ -60,7 +60,7 @@ def get_rate_constants(T):
     # DFT computed activation energy for the reactions
     Ea_eV = np.array([0.0,   #0 O2 + 2* = 2O*
                       2.993,
-                      0,     #1 NH3 + * = NH3*
+                      0.0,   #1 NH3 + * = NH3*
                       0.773,
                       0.580, #2 NH3* + O* = NH2* + OH*
                       1.276, 
@@ -76,27 +76,27 @@ def get_rate_constants(T):
                       0.525, 
                       0.842, #8 OH* + OH* = O* + H2O*
                       0.308,
-                      0,     #9 H2O + * = H2O*
+                      0.0,   #9 H2O + * = H2O*
                       0.252,
                       1.182, #10 N* + N* = N2 + *
                       1.813,
                       1.458, #11 N* + O* = NO* + *
                       1.657, 
                       2.329, #12 NO* = NO + *
-                      0, 
+                      0.0, 
                       1.625, #13 N* + NO* =N2O*
                       0.444,
                       0.000, #14 N2O* = N2O + *
                       0.095,
-                      1.15, #15 NH3* + * = NH2* + H*
+                      1.15,  #15 NH3* + * = NH2* + H*
                       1.37,
-                      1.61, #16 NH2* + * = NH* + H*
+                      1.61,  #16 NH2* + * = NH* + H*
                       0.88,
-                      1.30, #17 NH* + * = N* + H*
+                      1.30,  #17 NH* + * = N* + H*
                       0.66,
-                      0.50, #18 O* + H* = OH*
+                      0.50,  #18 O* + H* = OH*
                       1.03, 
-                      0.96, #19 OH* + H* = H2O*
+                      0.96,  #19 OH* + H* = H2O*
                       0.64])
 
     # Gibbs free energy for O2 adsorption
